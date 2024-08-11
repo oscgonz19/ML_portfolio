@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <div className="relative h-screen w-full">
       <Image
-        src="/pexel_1.jpg" // Reemplaza con la ruta de tu imagen
+        src="/fondo2.jpg" // Reemplaza con la ruta de tu imagen
         alt="Background"
         layout="fill"
         objectFit="cover"
