@@ -19,7 +19,7 @@ const Mentorship = () => {
         </div>
         <div className="w-full md:w-1/2">
           <Image
-            src="/pexel_1.jpg" // Reemplaza con la ruta de tu imagen
+            src="/public/Profile12.png" // Reemplaza con la ruta de tu imagen
             alt="Mentorship"
             layout="responsive"
             width={500}

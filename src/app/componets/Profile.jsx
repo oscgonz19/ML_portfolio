@@ -9,10 +9,10 @@ const Profile = () => {
     <h1 className="text-3xl font-semibold mb-6">1:1 Advice and Help</h1>
     <div className="bg-gray-100 p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
         <Image
-        src="/" // Reemplaza con la ruta de tu imagen
+        src="/Profile13.png" // Reemplaza con la ruta de tu imagen
         alt="Profile"
-        width={200} // Ancho de la imagen (24 * 4 = 96px)
-        height={200} // Alto de la imagen (24 * 4 = 96px)
+        width={300} // Ancho de la imagen (24 * 4 = 96px)
+        height={400} // Alto de la imagen (24 * 4 = 96px)
         className="rounded-full mb-2"
         />
         <h2 className="text-4xl font-semibold mb-2 text-black "> Ozz <span role="img" aria-label="heart"> ⚡</span></h2>

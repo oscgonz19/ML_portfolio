@@ -62,7 +62,7 @@ export default function AreasOfInterest() {
             <div key={index} className="text-center p-8 border border-gray-600 rounded-lg shadow-lg">
               {area.icon}
               <h3 className="text-gray-700 text-xl font-semibold mb-2">{area.title}</h3>
-            
+              <p className="text-gray-600">{area.description}</p>
             </div>
           ))}
         </div>
