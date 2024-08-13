@@ -11,10 +11,10 @@ export default function Navbar() {
         </div>
         <ul className="hidden md:flex space-x-4 text-xl">
           <li>
-            <Link href="/resume">Resume</Link>
+            <Link href="https://www.canva.com/design/DAFs7jzIutM/WkONmE7E75_GS3KU2lfbSg/view">CV</Link>
           </li>
           <li>
-            <Link href="/talks">Portfolio</Link>
+            <Link href="">Portfolio</Link>
           </li>
           <li>
             <Link href="https://www.linkedin.com/in/oscgonz19/recent-activity/articles/">Articles</Link>

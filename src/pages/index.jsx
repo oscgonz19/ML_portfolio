@@ -22,7 +22,7 @@ export default function Home() {
       </div>
       <main className="flex-1">
         <HeroSection />
-        <div className="px-2 sm:px-6 lg:px-8">
+        <div className="px-2 sm:px-6 lg:px-8 rounded">
           <AreasOfInterest />
           <div className="relative">
             <Articles />
