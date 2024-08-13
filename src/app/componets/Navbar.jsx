@@ -5,7 +5,7 @@ import { FaLinkedin, FaGithub } from 'react-icons/fa';
 export default function Navbar() {
   return (
     <nav className="bg-black text-white p-3">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center max-w-full">
         <div className="text-xl font-bold">
           <Link href="/">ozzproject.com</Link>
         </div>
@@ -32,7 +32,6 @@ export default function Navbar() {
           </a>
         </div>
         <div className="md:hidden">
-          {/* Aquí puedes agregar un botón de menú hamburguesa para dispositivos móviles */}
           <button className="text-white">
             <i className="fas fa-bars"></i>
           </button>
