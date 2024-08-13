@@ -10,8 +10,8 @@ const Profile = () => {
         <Image
         src="/Profile13.png" // Reemplaza con la ruta de tu imagen
         alt="Profile"
-        width={300} // Ancho de la imagen (24 * 4 = 96px)
-        height={300} // Alto de la imagen (24 * 4 = 96px)
+        width={200} // Ancho de la imagen (24 * 4 = 96px)
+        height={200} // Alto de la imagen (24 * 4 = 96px)
         className="rounded-full mb-2"
         />
         <h2 className="text-4xl font-semibold mb-2 text-black "> Ozz <span role="img" aria-label="heart"> ⚡</span></h2>

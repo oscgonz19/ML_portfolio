@@ -15,7 +15,7 @@ export default function HeroSection() {
         />
     <div className="relative z-10 flex flex-col items-right justify-center h-full text-white">
         <div className="ml-20 items-right">
-        <h1 className="mt-4 text-6xl font-bold font-serif drop-shadow-lg">Óscar Antonio González</h1>
+        <h1 className="mt-4 text-6xl font-bold font-serif drop-shadow-lg">Óscar Antonio González G.</h1>
         <p className="m-2 text-2xl drop-shadow-lg font-mono">
             Machine learning. Data science. Earth science.
         </p>
