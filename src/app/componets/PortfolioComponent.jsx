@@ -28,12 +28,27 @@ const projects = [
     ],
     tags: ['data analysis', 'machine learning', 'bias detection'],
     category: 'Data Science'
+  },
+  {
+    title: 'ML Portfolio',
+    description: 'A collection of data science projects that I have worked on over the years.',
+    imageUrl: '/wallpaperwebMLgithub.jpg',
+    link: 'https://github.com/oscgonz19/ML_portfolio',
+    highlights: [
+      'Implemented a variety of machine learning algorithms from scratch',
+      'Developed a custom data pipeline for data preprocessing and model evaluation',
+      'Created a web app for interactive model training and testing'
+    ],
+    tags: ['machine learning', 'data analysis', 'web app'],
+    category:'Software Developer'
   }
+
+  
   // Agrega más proyectos aquí...
 ];
 
 const categoryBackgrounds = {
-  "Machine Learning": "bg-gray-800",
+  "Machine Learning": "bg-cyan-950",
   "Data Science": "bg-green-800",
   "Software Developer": "bg-red-900",
 };
@@ -50,8 +65,8 @@ export default function PortfolioComponent() {
             <Image
               src={project.imageUrl}
               alt={project.title}
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: 'cover' }}
               className="rounded-md"
             />
           </div>
@@ -79,7 +94,7 @@ export default function PortfolioComponent() {
   return (
     <section className={`${categoryBackgrounds[selectedCategory]} text-gray-800 py-10 transition-colors duration-500`}>
       <div className="container mx-auto p-5">
-        <h1 className="text-4xl font-semibold mb-4 text-center text-white">Explore the platform</h1>
+        <h1 className="text-4xl font-semibold font-sans mb-4 text-center text-white">Explore Projects</h1>
         <div className="flex justify-center mb-10">
           <button
             onClick={() => setSelectedCategory("Machine Learning")}
@@ -97,12 +112,13 @@ export default function PortfolioComponent() {
             onClick={() => setSelectedCategory("Software Developer")}
             className={`px-4 py-2 mx-2 rounded-lg font-semibold ${selectedCategory === "Software Developer" ? "bg-blue-500 text-white" : "bg-white text-blue-500"}`}
           >
-            Software Developer
+            Software Development
           </button>
+          
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {renderProjects()}
-        </div>
+        </div>        
       </div>
     </section>
   );

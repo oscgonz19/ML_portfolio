@@ -1,6 +1,6 @@
 'use client';
 
-import { FaEnvelope, FaTiktok, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope, FaTiktok, FaInstagram, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -95,21 +95,17 @@ const Footer = () => {
 
         <div className="mt-10 text-center">
           <div className="flex justify-center space-x-4 text-2xl">
-            <Link href="mailto:example@example.com" legacyBehavior>
-              <a className="hover:text-gray-500"><FaEnvelope /></a>
-            </Link>
-            <Link href="https://www.tiktok.com" legacyBehavior>
-              <a className="hover:text-gray-500"><FaTiktok /></a>
-            </Link>
-            <Link href="https://www.instagram.com" legacyBehavior>
-              <a className="hover:text-gray-500"><FaInstagram /></a>
-            </Link>
+        
             <Link href="https://www.twitter.com" legacyBehavior>
               <a className="hover:text-gray-500"><FaTwitter /></a>
             </Link>
             <Link href="https://www.linkedin.com" legacyBehavior>
               <a className="hover:text-gray-500"><FaLinkedin /></a>
             </Link>
+            <Link href="https://github.com/oscgonz19" legacyBehavior>
+              <a className="hover:text-gray-500"><FaGithub /></a>
+            </Link>
+
           </div>
          <p className="mt-4 text-gray-400">{new Date().getFullYear()} All rights reserved. Made with 💜.</p>
 

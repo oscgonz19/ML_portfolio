@@ -8,8 +8,8 @@ export default function HeroSection() {
       <Image
         src="/fondo2.jpg" // Reemplaza con la ruta de tu imagen
         alt="Background"
-        layout="fill"
-        objectFit="cover"
+        fill
+        style={{ objectFit: 'cover' }}
         quality={100}
         className="absolute inset-0 brightness-120 contrast-100"
         />

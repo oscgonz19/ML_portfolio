@@ -12,13 +12,13 @@ const Profile = () => {
         src="/Profile13.png" // Reemplaza con la ruta de tu imagen
         alt="Profile"
         width={300} // Ancho de la imagen (24 * 4 = 96px)
-        height={400} // Alto de la imagen (24 * 4 = 96px)
+        height={300} // Alto de la imagen (24 * 4 = 96px)
         className="rounded-full mb-2"
         />
         <h2 className="text-4xl font-semibold mb-2 text-black "> Ozz <span role="img" aria-label="heart"> ⚡</span></h2>
         <p className="text-gray-800 mb-2">data and earth scientist with passion for tech, car spotting & finance, currently based on Colombia</p>
         <p className="text-gray-800 mb-4">📍 Quindío/ co</p>
-    <button className="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-900">Mentorship</button>
+    <button className="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-900">  Contact   </button>
           
         </div>
         </div>

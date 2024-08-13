@@ -25,7 +25,7 @@ export default function Navbar() {
           </li>
         </ul>
         <div className="flex space-x-2">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/oscgonz19" target="_blank" rel="noopener noreferrer">
             <FaGithub className="w-10 h-8"/>
           </a>
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">

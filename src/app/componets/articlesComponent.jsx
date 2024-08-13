@@ -11,7 +11,7 @@ const articles = [
     link: "https://www.linkedin.com/pulse/la-nube-que-todo-lo-sostiene-ia-y-el-procesamiento-masivo-gonz%25C3%25A1lez-anfje/?trackingId=oO29lttNTzmMdsdAE9AQvQ%3D%3D",
   },
   {
-    title: "Explorando la Ciencia de Datos: Transformando el Mar de Datos...",
+    title: "Explorando la Ciencia de Datos: Navegando Un Mar de Datos...",
     description: "Con la expansión constante del internet y el desarrollo tecnológico, la capacidad de extraer conocimientos útiles de grandes volúmenes de datos es más crucial que nunca. ",
     author: "Óscar Antonio González",
     readingTime: "6 min de lectura",
@@ -36,8 +36,8 @@ const renderArticles = () => {
         <Image
           src={article.imageUrl}
           alt={article.title}
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: 'cover' }} // Aquí utilizamos el nuevo sistema de estilos
           className="rounded-md"
         />
       </div>
@@ -52,7 +52,7 @@ const renderArticles = () => {
       <div className="mt-auto">
         <Link href={article.link} legacyBehavior>
           <a className="bg-black text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-800">
-            Leer Artículo
+           Read Article
           </a>
         </Link>
       </div>
