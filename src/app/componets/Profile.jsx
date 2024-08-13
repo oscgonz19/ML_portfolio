@@ -5,8 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 const Profile = () => {
     return (
-    <div className="bg-black-100 p-6 rounded-lg shadow-lg text-center">
-    <h1 className="text-3xl font-semibold mb-6">1:1 Advice and Help</h1>
+    <div className="p-6 text-center">
     <div className="bg-gray-100 p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
         <Image
         src="/Profile13.png" // Reemplaza con la ruta de tu imagen
@@ -22,6 +21,7 @@ const Profile = () => {
           
         </div>
         </div>
+
     
     );
 };
