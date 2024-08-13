@@ -1,7 +1,6 @@
 'use client';
 import Link from 'next/link';
-import {FaLinkedin, FaGithub, FaMedium } from 'react-icons/fa';
-
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 export default function Navbar() {
   return (
@@ -10,7 +9,7 @@ export default function Navbar() {
         <div className="text-xl font-bold">
           <Link href="/">ozzproject.com</Link>
         </div>
-        <ul className="flex space-x-4 text-xl">
+        <ul className="hidden md:flex space-x-4 text-xl">
           <li>
             <Link href="/resume">Resume</Link>
           </li>
@@ -24,13 +23,19 @@ export default function Navbar() {
             <Link href="/other-sites">Other Sites</Link>
           </li>
         </ul>
-        <div className="flex space-x-2">
-            <a href="https://github.com/oscgonz19" target="_blank" rel="noopener noreferrer">
-            <FaGithub className="w-10 h-8"/>
+        <div className="hidden md:flex space-x-2">
+          <a href="https://github.com/oscgonz19" target="_blank" rel="noopener noreferrer">
+            <FaGithub className="w-6 h-6"/>
           </a>
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin className="w-10 h-8"/>
+            <FaLinkedin className="w-6 h-6"/>
           </a>
+        </div>
+        <div className="md:hidden">
+          {/* Aquí puedes agregar un botón de menú hamburguesa para dispositivos móviles */}
+          <button className="text-white">
+            <i className="fas fa-bars"></i>
+          </button>
         </div>
       </div>
     </nav>
