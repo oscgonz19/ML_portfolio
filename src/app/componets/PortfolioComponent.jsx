@@ -4,25 +4,38 @@ import Link from 'next/link';
 
 const projects = [
   {
-    title: 'Unstructured Notebooks',
-    description: 'Un conjunto de notebooks para el análisis de datos no estructurados. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    imageUrl: '/unsu.png',
-    link: 'https://github.com/oscgonz19/unstructured_notebooks',
+    title: 'Automated Financial Analysis using LLM and RAG Techniques',
+    description: ' This project leverages advanced techniques in Language Learning Models (LLM) and Retrieval-Augmented Generation (RAG) to streamline and enhance the analysis of financial reports, specifically 10-K and 10-Q filings.',
+    imageUrl: '/financialAnalisis.jpg',
+    link: 'https://github.com/oscgonz19/Automated-Financial-Analysis-LLM-RAG',
     highlights: [
-      'Developed a comprehensive PyTorch / HuggingFace text classification pipeline',
-      'Built multiple transformers including BERT and RoBERTa with custom pooling layers',
-      'Implemented an interactive web app for custom text reading complexity estimation'
+      'A project that uses LLM and RAG techniques to automate financial analysis.',
+      'Aims to streamline and enhance the analysis of financial reports.',
+      'Specifically focuses on 10-K and 10-Q filings.'
     ],
-    tags: ['natural language processing', 'deep learning', 'web app'],
+    tags: ['Machine Learning', 'Unstructured Data', 'Financial Analysis'],
     category: 'Machine Learning'
+    
   },
   {
-    title: 'Exposing Bias in Credit Germany',
-    description: 'Analysis of credit bias in the German credit dataset using various machine learning techniques.',
-    imageUrl: '/unsu.png',
-    link: 'https://github.com/oscgonz19/unstructured_notebooks',
+    title: 'Monitoring the Financial Market of Psychedelics and Cannabis Using AI',
+    description: 'This project uses Langchain to monitor the financial market of psychedelics and cannabis using AI. It leverages OpenAI API and NewsAPI to analyze financial news and provide insights.',
+    imageUrl: '/cannabisnews.jpg',
+    link: 'https://github.com/oscgonz19/PsyCannaFinance',
     highlights: [
-      'Analyzed bias using logistic regression and decision trees',
+      "Langchain for financial news analysis using OpenAI api and NewsAPI",
+      "Exploratory data analysis and visualization for insights",
+    ],
+    tags: ['LangChain', 'OpenAI', 'Financial News'],
+    category: 'Data Science'
+  },
+  {
+    title: 'COMPAS: Exploring Bias in Criminal Profiling Management',
+    description: 'Analyzed bias in criminal profiling management using the COMPAS dataset. Explored data preprocessing techniques to handle missing data and developed visualizations to illustrate the impact of bias.',
+    imageUrl: '/compas.jpg',
+    link: 'https://github.com/oscgonz19/fair_scoring_AIF360/blob/main/compass_bias_%26_fairness.ipynb',
+    highlights: [
+      'Analyzed bias in criminal profiling management using the COMPAS dataset',
       'Explored data preprocessing techniques to handle missing data',
       'Developed visualizations to illustrate the impact of bias'
     ],
@@ -41,7 +54,21 @@ const projects = [
     ],
     tags: ['machine learning', 'data analysis', 'web app'],
     category:'Software Developer'
-  }
+  },
+  {
+    title: 'CRUD application built with NestJs',
+    description: 'A simple CRUD application built with NestJs and PostgreSQL.',
+    imageUrl: '/nestjs.jpg',
+    link: 'https://github.com/oscgonz19/CRUD-NestJs-firstProject-scheme"',
+    highlights: [
+      'A progressive Node.js framework for building efficient and scalable server-side applications.',
+      'Uses TypeScript, a superset of JavaScript that combines type checking and static analysis.',
+      'Utilizes PostgreSQL, a powerful, open-source object-relational database system.'
+    ],
+    tags: ['NestJs', 'CRUD', 'Web App'],
+    category: 'Software Developer'
+  },
+
 
   
   // Agrega más proyectos aquí...
@@ -60,7 +87,7 @@ export default function PortfolioComponent() {
     return projects
       .filter(project => project.category === selectedCategory)
       .map((project, index) => (
-        <div key={index} className="bg-gray-300 p-6 rounded-lg shadow-lg text-black">
+        <div key={index} className="bg-gray-300 p-6 rounded-lg shadow-lg text-black flex flex-col">
           <div className="relative w-full h-48 mb-4">
             <Image
               src={project.imageUrl}
@@ -70,23 +97,29 @@ export default function PortfolioComponent() {
               className="rounded-md"
             />
           </div>
-          <h3 className="text-3xl font-semibold mb-2">{project.title}</h3>
-          <p className="text-lg mb-4">{project.description}</p>
-          <ul className="mb-4">
-            {project.highlights.map((highlight, i) => (
-              <li key={i} className="list-disc ml-5 text-sm">{highlight}</li>
-            ))}
-          </ul>
-          <div className="mb-4">
-            {project.tags.map((tag, i) => (
-              <span key={i} className="bg-blue-200 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold mr-2">{tag}</span>
-            ))}
+          <div className="flex flex-col flex-grow justify-between">
+            <div>
+              <h3 className="text-3xl font-semibold mb-2">{project.title}</h3>
+              <p className="text-lg mb-4">{project.description}</p>
+              <ul className="mb-4">
+                {project.highlights.map((highlight, i) => (
+                  <li key={i} className="list-disc ml-5 text-sm">{highlight}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="mt-4">
+              <div className="mb-4">
+                {project.tags.map((tag, i) => (
+                  <span key={i} className="bg-blue-200 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold mr-2">{tag}</span>
+                ))}
+              </div>
+              <Link href={project.link} legacyBehavior>
+                <a className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-800">
+                  Learn more
+                </a>
+              </Link>
+            </div>
           </div>
-          <Link href={project.link} legacyBehavior>
-            <a className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-800">
-              Learn more
-            </a>
-          </Link>
         </div>
       ));
   };
@@ -95,7 +128,7 @@ export default function PortfolioComponent() {
     <section className={`${categoryBackgrounds[selectedCategory]} text-gray-800 py-10 transition-colors duration-500`}>
       <div className="container mx-auto p-5">
         <h1 className="text-4xl font-semibold font-sans mb-4 text-center text-white">Explore Projects</h1>
-        <div className="flex justify-center mb-10">
+        <div className="flex justify-center items-center mb-10">
           <button
             onClick={() => setSelectedCategory("Machine Learning")}
             className={`px-4 py-2 mx-2 rounded-lg font-semibold ${selectedCategory === "Machine Learning" ? "bg-blue-500 text-white" : "bg-white text-blue-500"}`}
@@ -114,7 +147,6 @@ export default function PortfolioComponent() {
           >
             Software Development
           </button>
-          
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {renderProjects()}
