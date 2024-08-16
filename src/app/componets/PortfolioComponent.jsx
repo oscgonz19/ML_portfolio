@@ -69,7 +69,7 @@ const projects = [
     category:'Software Developer'
   },
   {
-    title: 'CRUD application built with NestJs',
+    title: 'CRUD application built with Nest.js',
     description: 'A simple CRUD application built with NestJs and PostgreSQL.',
     imageUrl: '/nestjs.jpg',
     link: 'https://github.com/oscgonz19/CRUD-NestJs-firstProject-scheme"',
