@@ -4,7 +4,7 @@ import '../app/globals.css';
 // Componentes
 import HeroSection from '../app/componets/HeroSection';
 import Navbar from '../app/componets/Navbar';
-import Projects from '../app/componets/Projects';
+
 import AboutMe from "../app/componets/AboutMe";
 import AreasOfInterest from "../app/componets/AreasOfInterest";
 import Mentorship from "../app/componets/Mentorship";

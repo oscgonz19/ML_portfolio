@@ -45,13 +45,12 @@ const renderArticles = () => {
         <h3 className="text-3xl font-semibold mb-2">{article.title}</h3>
         <p className="text-lg mb-4 flex-grow">{article.description}</p>
         <div className="flex justify-between items-center mb-4">
-          <span className="text-sm text-gray-600">{article.author}</span>
           <span className="text-sm text-gray-600">{article.readingTime}</span>
         </div>
       </div>
       <div className="mt-auto">
         <Link href={article.link} legacyBehavior>
-          <a className="bg-black text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-800">
+          <a className="bg-gray-800 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-800">
            Read Article
           </a>
         </Link>

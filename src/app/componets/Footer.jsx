@@ -65,7 +65,7 @@ const Footer = () => {
               </li>
               <li className="mb-2">
                 <Link href="mailto:example@example.com" legacyBehavior>
-                  <a className="hover:underline">Email: example@example.com</a>
+                  <a className="hover:underline">Email: oscargo1917@gmail.com</a>
                 </Link>
               </li>
             </ul>
@@ -76,17 +76,17 @@ const Footer = () => {
             <ul>
               <li className="mb-2">
                 <Link href="/projects#project1" legacyBehavior>
-                  <a className="hover:underline">Project 1</a>
+                  <a className="hover:underline">Vivo </a>
                 </Link>
               </li>
               <li className="mb-2">
                 <Link href="/projects#project2" legacyBehavior>
-                  <a className="hover:underline">Project 2</a>
+                  <a className="hover:underline">Geologia & Concreto</a>
                 </Link>
               </li>
               <li className="mb-2">
                 <Link href="/projects#project3" legacyBehavior>
-                  <a className="hover:underline">Project 3</a>
+                  <a className="hover:underline">Not Everything Belong to The Sea </a>
                 </Link>
               </li>
             </ul>
@@ -96,10 +96,10 @@ const Footer = () => {
         <div className="mt-10 text-center">
           <div className="flex justify-center space-x-4 text-2xl">
         
-            <Link href="https://www.twitter.com" legacyBehavior>
+            <Link href="https://x.com/Oscgonz_19" legacyBehavior>
               <a className="hover:text-gray-500"><FaTwitter /></a>
             </Link>
-            <Link href="https://www.linkedin.com" legacyBehavior>
+            <Link href="https://www.linkedin.com/oscgonz19/" legacyBehavior>
               <a className="hover:text-gray-500"><FaLinkedin /></a>
             </Link>
             <Link href="https://github.com/oscgonz19" legacyBehavior>

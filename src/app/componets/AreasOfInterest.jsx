@@ -1,6 +1,6 @@
 'use client';
 
-import { FaCloud, FaLanguage, FaRobot,FaMapMarkedAlt, FaRocket, FaChartBar, FaGlobe, FaLaptopCode, FaCode, FaChess, FaCodepen, FaMountain, FaBalanceScale } from 'react-icons/fa';
+import { FaCloud, FaLanguage, FaRobot,FaMapMarkedAlt, FaRocket, FaChartBar, FaGlobe, FaLaptopCode, FaCode, FaChess, FaCodepen, FaDatabase, FaBalanceScale } from 'react-icons/fa';
 
 const areasOfInterest = [
   {
@@ -24,9 +24,9 @@ const areasOfInterest = [
     icon: <FaCodepen className="mx-auto mb-4 h-12 w-12 text-gray-700" />,
   },
   {
-    title: 'Model Deployment',
-    description: 'Integrating machine learning models into real-world production systems using REST APIs and scalable architectures.',
-    icon: <FaRocket className="mx-auto mb-4 h-12 w-12 text-gray-700" />,
+  title: 'Data Pipeline Automation',
+  description: 'Designing and implementing ETL pipelines to process and transform data efficiently for analytics and machine learning models.',
+  icon: <FaDatabase className="mx-auto mb-4 h-12 w-12 text-gray-700" />,
   },
   {
     title: 'FinTech',
