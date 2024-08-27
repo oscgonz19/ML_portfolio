@@ -103,6 +103,19 @@ const projects = [
     ],
     tags: ['TypeScript', 'Backend', 'TypeORM', 'PostgreSQL'],
     category: 'Web Development'
+  },
+  {
+    title:'Not Everything Belong To The Sea',
+    description: 'Documentary page about the impact of plastic pollution on Colombian coasts .',
+    imageUrl: '/NEBTS2.png',
+    link: 'github.com/oscgonz19',
+    highlights: [
+      'A documentary page about the impact of plastic pollution on Colombian coasts.',
+      'Built with Next.js and Tailwind CSS.',
+      'Hosted on Vercel.'
+    ],
+    tags: ['React.js', 'Frontend', 'Web App'],
+    category: 'Web Development'
   }
 ];
 
@@ -177,7 +190,7 @@ export default function PortfolioComponent() {
             onClick={() => setSelectedCategory("Web Development")}
             className={`px-4 py-2 mx-2 my-1 rounded-lg font-semibold ${selectedCategory === "Web Development" ? "bg-blue-500 text-white" : "bg-white text-blue-500"}`}
           >
-            Web Development
+            FullStack Development
           </button>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
