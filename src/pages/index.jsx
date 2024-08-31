@@ -19,7 +19,7 @@ export default function Home() {
       </div>
       <main className="flex-1">
         <HeroSection />
-        <div className="px-2 sm:px-6 lg:px-8 rounded">
+        <div className="px-2 sm:px-6 lg:px-8 rounded bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-16">
           <div className="container mx-auto bg-black-100">
             <Profile />
           </div>

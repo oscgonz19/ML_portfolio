@@ -13,7 +13,7 @@ const Profile = () => {
         initial={{ opacity: 0, y: 20 }} 
         animate={{ opacity: 1, y: 0 }} 
         transition={{ duration: 0.6 }} 
-        className="bg-white p-8 rounded-lg shadow-xl flex flex-col items-center text-center transform transition duration-500 hover:scale-105 bg-gradient-to-br from-blue-50 via-white to-indigo-50 "
+        className="bg-white p-8 rounded-lg shadow-xl flex flex-col items-center text-center transform transition duration-500 hover:scale-105"
       >
         <Image
           src="/Profile13.png" // Reemplaza con la ruta de tu imagen

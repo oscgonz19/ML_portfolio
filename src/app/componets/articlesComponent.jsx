@@ -134,7 +134,7 @@ export default function Articles() {
   };
 
   return (
-    <section className="bg-gradient-to-b from-gray-100 via-white to-gray-100 text-gray-800 py-10">
+    <section className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-16 text-gray-800 py-10">
       <div className="container mx-auto p-5 relative">
         <motion.h1 
           initial={{ opacity: 0, y: -20 }} 
