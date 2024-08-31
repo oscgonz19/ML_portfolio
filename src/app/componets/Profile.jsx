@@ -20,23 +20,11 @@ const Profile = () => {
           alt="Profile"
           width={200} 
           height={200} 
-          className="rounded-full mb-4 border-2 border-black-900"
+          className="rounded-full mb-4 border-2 border-orange-700"
         />
         <h2 className="text-4xl font-bold mb-2 text-gray-900"> Ozz <span role="img" aria-label="heart">⚡</span></h2>
         <p className="text-gray-700 mb-4">Data and Earth Scientist with passion for tech, car spotting & finance, currently based in Colombia.</p>
         <p className="text-gray-500 mb-6">📍 Quindío, Colombia</p>
-        <div className="flex justify-center mt-6 space-x-4">
-          <Link href="https://www.twitter.com" legacyBehavior>
-            <a target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-500">
-              <FaTwitter size={28} />
-            </a>
-          </Link>
-          <Link href="https://www.linkedin.com" legacyBehavior>
-            <a target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-700">
-              <FaLinkedin size={28} />
-            </a>
-          </Link>
-        </div>
       </motion.div>
     </div>
   );

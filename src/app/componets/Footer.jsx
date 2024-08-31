@@ -94,26 +94,10 @@ const Footer = () => {
         </div>
 
         <div className="mt-10 text-center">
-          <div className="flex justify-center space-x-6 text-2xl">
-            <Link href="https://x.com/Oscgonz_19" legacyBehavior>
-              <a className="hover:text-gray-400 transition-colors duration-300">
-                <FaTwitter />
-              </a>
-            </Link>
-            <Link href="https://www.linkedin.com/oscgonz19/" legacyBehavior>
-              <a className="hover:text-gray-400 transition-colors duration-300">
-                <FaLinkedin />
-              </a>
-            </Link>
-            <Link href="https://github.com/oscgonz19" legacyBehavior>
-              <a className="hover:text-gray-400 transition-colors duration-300">
-                <FaGithub />
-              </a>
-            </Link>
+        <p className="mt-6 text-gray-500">{new Date().getFullYear()} All rights reserved. Made with <span className="text-purple-500">💜</span>.</p>
           </div>
-          <p className="mt-6 text-gray-500">{new Date().getFullYear()} All rights reserved. Made with <span className="text-purple-500">💜</span>.</p>
+          
         </div>
-      </div>
     </footer>
   );
 };

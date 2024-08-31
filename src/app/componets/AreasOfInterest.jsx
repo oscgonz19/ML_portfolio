@@ -77,7 +77,7 @@ export default function AreasOfInterest() {
           initial={{ opacity: 0, y: -20 }} 
           animate={{ opacity: 1, y: 0 }} 
           transition={{ duration: 0.6 }} 
-          className="text-5xl font-extrabold text-center mb-12 text-gray-900"
+          className="text-5xl font-bold text-center mb-12 text-gray-900"
         >
           Focus Areas
         </motion.h1>
