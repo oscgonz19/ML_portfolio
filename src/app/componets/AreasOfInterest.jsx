@@ -71,7 +71,7 @@ const areasOfInterest = [
 
 export default function AreasOfInterest() {
   return (
-    <section className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-16">
+    <section className="bg-white">
       <div className="container mx-auto px-6">
         <motion.h1 
           initial={{ opacity: 0, y: -20 }} 
