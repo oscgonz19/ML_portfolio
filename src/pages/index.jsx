@@ -4,10 +4,7 @@ import '../app/globals.css';
 // Componentes
 import HeroSection from '../app/componets/HeroSection';
 import Navbar from '../app/componets/Navbar';
-
-import AboutMe from "../app/componets/AboutMe";
 import AreasOfInterest from "../app/componets/AreasOfInterest";
-import Mentorship from "../app/componets/Mentorship";
 import Profile from "../app/componets/Profile";
 import Footer from "../app/componets/Footer";
 import PortfolioComponent from "@/app/componets/PortfolioComponent";
@@ -23,13 +20,13 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <div className="px-2 sm:px-6 lg:px-8 rounded">
-          <AreasOfInterest />
-          <div className="relative">
-            <Articles />
-            <PortfolioComponent />
-          </div>
           <div className="container mx-auto bg-black-100">
             <Profile />
+          </div>
+          <AreasOfInterest />
+          <div className="relative">
+            <PortfolioComponent />
+            <Articles />
           </div>
         </div>
       </main>

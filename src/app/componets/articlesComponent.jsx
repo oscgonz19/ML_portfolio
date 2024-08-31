@@ -1,15 +1,15 @@
-import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Slider from 'react-slick';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { motion } from 'framer-motion';
 
 // Flecha izquierda
 const PrevArrow = ({ onClick }) => (
   <div
-    className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer bg-gray-800 p-2 rounded-full hover:bg-blue-800"
+    className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer bg-gray-800 p-2 rounded-full hover:bg-blue-600 transition duration-300 ease-in-out"
     onClick={onClick}
   >
     <FaArrowLeft className="text-white text-lg" />
@@ -19,7 +19,7 @@ const PrevArrow = ({ onClick }) => (
 // Flecha derecha
 const NextArrow = ({ onClick }) => (
   <div
-    className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer bg-gray-800 p-2 rounded-full hover:bg-blue-800"
+    className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer bg-gray-800 p-2 rounded-full hover:bg-blue-600 transition duration-300 ease-in-out"
     onClick={onClick}
   >
     <FaArrowRight className="text-white text-lg" />
@@ -51,31 +51,34 @@ const articles = [
     imageUrl: "/faro.jpg",
     link: "https://www.linkedin.com/pulse/explorando-la-ciencia-de-datos-transformando-el-mar-en-gonz%25C3%25A1lez-q5yke/?trackingId=oO29lttNTzmMdsdAE9AQvQ%3D%3D",
   },
-    {
+  {
     title: "El Arte De La Personalización",
     description: "Un sistema recomendador es una aplicación de inteligencia artificial que sugiere opciones a los usuarios basándose en sus preferencias y comportamientos previos, así como en datos de otros usuarios con gustos similares.",
     author: "Óscar Antonio González",
     readingTime: "5 min de lectura",
     imageUrl: "/recommend.png",
     link: "https://www.linkedin.com/pulse/sistemas-recomendadores-el-arte-de-la-personalizaci%25C3%25B3n-gonz%25C3%25A1lez-uqfwe/",
-
   },
-  
   {
     title:"La Visualización de Datos en Ciencia de Datos",
-    description: "La visualización de datos es una herramienta poderosa que permite a los científicos de datos transformar números en decisiones estratégicas. ",
+    description: "La visualización de datos es una herramienta poderosa que permite a los científicos de datos transformar números en decisiones estratégicas.",
     author: "Óscar Antonio González",
     readingTime: "5 min de lectura",
     imageUrl: "/dataviz.png",
     link: "https://www.linkedin.com/pulse/la-visualizaci%25C3%25B3n-de-datos-en-ciencia-transformando-n%25C3%25BAmeros-gonz%25C3%25A1lez-g1uee/?trackingId=p88wGJ%2FV%2F5U54gNIRDeRPA%3D%3D",
   },
-
   // Más artículos...
 ];
 
 const renderArticles = () => {
   return articles.map((article, index) => (
-    <div key={index} className="flex flex-col bg-gray-300 p-6 rounded-lg shadow-lg text-black h-full">
+    <motion.div 
+      key={index} 
+      className="flex flex-col bg-white p-6 rounded-lg shadow-lg text-gray-800 h-full"
+      initial={{ opacity: 0, y: 20 }} 
+      animate={{ opacity: 1, y: 0 }} 
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+    >
       <div className="relative w-full h-60 mb-4">
         <Image
           src={article.imageUrl}
@@ -86,27 +89,27 @@ const renderArticles = () => {
         />
       </div>
       <div className="flex flex-col flex-grow">
-        <h3 className="text-2xl font-semibold mb-2">{article.title}</h3>
+        <h3 className="text-2xl font-bold mb-2">{article.title}</h3>
         <p className="text-lg mb-4 flex-grow">{article.description}</p>
         <div className="flex justify-between items-center mb-4">
-          <span className="text-sm text-gray-600">{article.readingTime}</span>
+          <span className="text-sm text-gray-500">{article.readingTime}</span>
         </div>
       </div>
       <div className="mt-auto">
         <Link href={article.link} legacyBehavior>
-          <a className="bg-gray-800 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-800">
+          <a className="bg-indigo-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300 ease-in-out">
             Leer artículo
           </a>
         </Link>
       </div>
-    </div>
+    </motion.div>
   ));
 };
 
 export default function Articles() {
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -131,9 +134,16 @@ export default function Articles() {
   };
 
   return (
-    <section className="bg-gray-100 text-gray-800 py-10">
+    <section className="bg-gradient-to-b from-gray-100 via-white to-gray-100 text-gray-800 py-10">
       <div className="container mx-auto p-5 relative">
-        <h1 className="text-4xl font-semibold mb-4 text-center">Artículos Destacados</h1>
+        <motion.h1 
+          initial={{ opacity: 0, y: -20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.6 }} 
+          className="text-4xl font-extrabold mb-8 text-center text-gray-900"
+        >
+          Feature Articles
+        </motion.h1>
         <Slider {...settings}>
           {renderArticles()}
         </Slider>

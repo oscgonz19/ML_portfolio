@@ -5,88 +5,88 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-10">
-      <div className="container mx-auto">
+    <footer className="bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white py-10">
+      <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-semibold mb-4">Portfolio</h3>
-            <ul>
-              <li className="mb-2">
+            <h3 className="text-xl font-bold mb-4">Portfolio</h3>
+            <ul className="space-y-2">
+              <li>
                 <Link href="/portfolio" legacyBehavior>
-                  <a className="hover:underline">View All Projects</a>
+                  <a className="hover:underline hover:text-gray-400">View All Projects</a>
                 </Link>
               </li>
-              <li className="mb-2">
+              <li>
                 <Link href="/portfolio#data-viz" legacyBehavior>
-                  <a className="hover:underline">Data Visualization</a>
+                  <a className="hover:underline hover:text-gray-400">Data Visualization</a>
                 </Link>
               </li>
-              <li className="mb-2">
+              <li>
                 <Link href="/portfolio#machine-learning" legacyBehavior>
-                  <a className="hover:underline">Machine Learning</a>
+                  <a className="hover:underline hover:text-gray-400">Machine Learning</a>
                 </Link>
               </li>
-              <li className="mb-2">
+              <li>
                 <Link href="/portfolio#web-development" legacyBehavior>
-                  <a className="hover:underline">Web Development</a>
+                  <a className="hover:underline hover:text-gray-400">Web Development</a>
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-4">Certifications</h3>
-            <ul>
-              <li className="mb-2">
+            <h3 className="text-xl font-bold mb-4">Certifications</h3>
+            <ul className="space-y-2">
+              <li>
                 <Link href="/certifications" legacyBehavior>
-                  <a className="hover:underline">Microsoft</a>
+                  <a className="hover:underline hover:text-gray-400">Microsoft</a>
                 </Link>
               </li>
-              <li className="mb-2">
+              <li>
                 <Link href="/certifications" legacyBehavior>
-                  <a className="hover:underline">AWS</a>
+                  <a className="hover:underline hover:text-gray-400">AWS</a>
                 </Link>
               </li>
-              <li className="mb-2">
+              <li>
                 <Link href="/certifications" legacyBehavior>
-                  <a className="hover:underline">Networking</a>
+                  <a className="hover:underline hover:text-gray-400">Networking</a>
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-4">Contact</h3>
-            <ul>
-              <li className="mb-2">
+            <h3 className="text-xl font-bold mb-4">Contact</h3>
+            <ul className="space-y-2">
+              <li>
                 <Link href="/contact" legacyBehavior>
-                  <a className="hover:underline">Contact Form</a>
+                  <a className="hover:underline hover:text-gray-400">Contact Form</a>
                 </Link>
               </li>
-              <li className="mb-2">
-                <Link href="mailto:example@example.com" legacyBehavior>
-                  <a className="hover:underline">Email: oscargo1917@gmail.com</a>
+              <li>
+                <Link href="mailto:oscargo1917@gmail.com" legacyBehavior>
+                  <a className="hover:underline hover:text-gray-400">Email: oscargo1917@gmail.com</a>
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-4">Other Projects</h3>
-            <ul>
-              <li className="mb-2">
+            <h3 className="text-xl font-bold mb-4">Other Projects</h3>
+            <ul className="space-y-2">
+              <li>
                 <Link href="/projects#project1" legacyBehavior>
-                  <a className="hover:underline">Vivo </a>
+                  <a className="hover:underline hover:text-gray-400">Vivo</a>
                 </Link>
               </li>
-              <li className="mb-2">
+              <li>
                 <Link href="/projects#project2" legacyBehavior>
-                  <a className="hover:underline">Geologia & Concreto</a>
+                  <a className="hover:underline hover:text-gray-400">Geología & Concreto</a>
                 </Link>
               </li>
-              <li className="mb-2">
+              <li>
                 <Link href="/projects#project3" legacyBehavior>
-                  <a className="hover:underline">Not Everything Belong to The Sea </a>
+                  <a className="hover:underline hover:text-gray-400">Not Everything Belong to The Sea</a>
                 </Link>
               </li>
             </ul>
@@ -94,21 +94,24 @@ const Footer = () => {
         </div>
 
         <div className="mt-10 text-center">
-          <div className="flex justify-center space-x-4 text-2xl">
-        
+          <div className="flex justify-center space-x-6 text-2xl">
             <Link href="https://x.com/Oscgonz_19" legacyBehavior>
-              <a className="hover:text-gray-500"><FaTwitter /></a>
+              <a className="hover:text-gray-400 transition-colors duration-300">
+                <FaTwitter />
+              </a>
             </Link>
             <Link href="https://www.linkedin.com/oscgonz19/" legacyBehavior>
-              <a className="hover:text-gray-500"><FaLinkedin /></a>
+              <a className="hover:text-gray-400 transition-colors duration-300">
+                <FaLinkedin />
+              </a>
             </Link>
             <Link href="https://github.com/oscgonz19" legacyBehavior>
-              <a className="hover:text-gray-500"><FaGithub /></a>
+              <a className="hover:text-gray-400 transition-colors duration-300">
+                <FaGithub />
+              </a>
             </Link>
-
           </div>
-         <p className="mt-4 text-gray-400">{new Date().getFullYear()} All rights reserved. Made with 💜.</p>
-
+          <p className="mt-6 text-gray-500">{new Date().getFullYear()} All rights reserved. Made with <span className="text-purple-500">💜</span>.</p>
         </div>
       </div>
     </footer>

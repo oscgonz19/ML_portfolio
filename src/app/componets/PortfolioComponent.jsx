@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 const projects = [
   {
     title: 'Automated Financial Analysis using LLM and RAG Techniques',
@@ -118,11 +118,10 @@ const projects = [
     category: 'Web Development'
   }
 ];
-
 const categoryBackgrounds = {
-  "Data Science & Machine Learning": "bg-cyan-950",
-  "Data Engineering": "bg-purple-950",
-  "Web Development": "bg-red-900"
+  "Data Science & Machine Learning": "bg-gradient-to-r from-cyan-800 via-blue-800 to-purple-800",
+  "Data Engineering": "bg-gradient-to-r from-purple-800 via-pink-800 to-red-800",
+  "Web Development": "bg-gradient-to-r from-red-800 via-orange-800 to-yellow-600"
 };
 
 export default function PortfolioComponent() {
@@ -132,7 +131,13 @@ export default function PortfolioComponent() {
     return projects
       .filter(project => project.category === selectedCategory)
       .map((project, index) => (
-        <div key={index} className="bg-gray-300 p-6 rounded-lg shadow-lg text-black flex flex-col h-full">
+        <motion.div 
+          key={index} 
+          className="bg-white p-6 rounded-lg shadow-lg text-black flex flex-col h-full transform transition duration-500 hover:scale-105"
+          initial={{ opacity: 0, y: 20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+        >
           <div className="relative w-full h-48 mb-4">
             <Image
               src={project.imageUrl}
@@ -144,51 +149,72 @@ export default function PortfolioComponent() {
           </div>
           <div className="flex flex-col flex-grow justify-between">
             <div>
-              <h3 className="text-3xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-lg mb-4">{project.description}</p>
-              <ul className="mb-4">
+              <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+              <p className="text-lg mb-4 text-gray-700">{project.description}</p>
+              <ul className="mb-4 list-disc list-inside">
                 {project.highlights.map((highlight, i) => (
-                  <li key={i} className="list-disc ml-5 text-sm">{highlight}</li>
+                  <li key={i} className="text-sm text-gray-600">{highlight}</li>
                 ))}
               </ul>
             </div>
             <div className="mt-4">
               <div className="mb-4">
                 {project.tags.map((tag, i) => (
-                  <span key={i} className="bg-blue-200 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold mr-2">{tag}</span>
+                  <span key={i} className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold mr-2">
+                    {tag}
+                  </span>
                 ))}
               </div>
               <Link href={project.link} legacyBehavior>
-                <a className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-800">
+                <a className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 ease-in-out">
                   Learn more
                 </a>
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
       ));
   };
 
   return (
     <section className={`${categoryBackgrounds[selectedCategory]} text-gray-800 py-10 transition-colors duration-500`}>
       <div className="container mx-auto p-5">
-        <h1 className="text-4xl font-semibold font-sans mb-4 text-center text-white">Explore Projects</h1>
+        <motion.h1 
+          initial={{ opacity: 0, y: -20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.6 }} 
+          className="text-4xl font-extrabold mb-8 text-center text-white"
+        >
+          Explore Projects
+        </motion.h1>
         <div className="flex justify-center items-center mb-10 flex-wrap">
           <button
             onClick={() => setSelectedCategory("Data Science & Machine Learning")}
-            className={`px-4 py-2 mx-2 my-1 rounded-lg font-semibold ${selectedCategory === "Data Science & Machine Learning" ? "bg-blue-500 text-white" : "bg-white text-blue-500"}`}
+            className={`px-4 py-2 mx-2 my-1 rounded-lg font-semibold ${
+              selectedCategory === "Data Science & Machine Learning"
+                ? "bg-blue-700 text-white shadow-lg"
+                : "bg-white text-blue-700 shadow"
+            } transition duration-300 ease-in-out`}
           >
             Data Science & Machine Learning
           </button>
           <button
             onClick={() => setSelectedCategory("Data Engineering")}
-            className={`px-4 py-2 mx-2 my-1 rounded-lg font-semibold ${selectedCategory === "Data Engineering" ? "bg-blue-500 text-white" : "bg-white text-blue-500"}`}
+            className={`px-4 py-2 mx-2 my-1 rounded-lg font-semibold ${
+              selectedCategory === "Data Engineering"
+                ? "bg-blue-700 text-white shadow-lg"
+                : "bg-white text-blue-700 shadow"
+            } transition duration-300 ease-in-out`}
           >
             Data Engineering
           </button>
           <button
             onClick={() => setSelectedCategory("Web Development")}
-            className={`px-4 py-2 mx-2 my-1 rounded-lg font-semibold ${selectedCategory === "Web Development" ? "bg-blue-500 text-white" : "bg-white text-blue-500"}`}
+            className={`px-4 py-2 mx-2 my-1 rounded-lg font-semibold ${
+              selectedCategory === "Web Development"
+                ? "bg-blue-700 text-white shadow-lg"
+                : "bg-white text-blue-700 shadow"
+            } transition duration-300 ease-in-out`}
           >
             FullStack Development
           </button>
